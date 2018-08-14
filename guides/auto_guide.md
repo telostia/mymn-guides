@@ -1,5 +1,5 @@
 ----------------------------------------------------
-MyMn COIN SIMPLE AUTO MASTER NODE SETUP GUIDE 
+MyMN COIN SIMPLE AUTO MASTER NODE SETUP GUIDE 
 ----------------------------------------------------
 
 -----------------------------
