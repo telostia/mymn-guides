@@ -1,5 +1,5 @@
 ----------------------------------------------------
-VETANI COIN SIMPLE AUTO MASTER NODE SETUP GUIDE 
+MyMn COIN SIMPLE AUTO MASTER NODE SETUP GUIDE 
 ----------------------------------------------------
 
 -----------------------------
