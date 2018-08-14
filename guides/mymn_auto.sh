@@ -19,6 +19,7 @@ sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 cd
 #get wallet files
 #wget https://raw.githubusercontent.com/telostia/mymn-guides/master/wallet/linux/mymn_linux.tar.gz
+
 wget https://github.com/telostia/mymn-guides/raw/master/wallet/linux64/mymn-linux.tar.gz
 tar -xvf mymn_linux.tar.gz
 rm mymn_linux.tar.gz mymn_auto.sh
