@@ -24,7 +24,7 @@ tar -xvf mymn-linux.tar.gz
 rm mymn-linux* mymn_auto.sh
 chmod +x mymn*
 cp mymn* /usr/local/bin
-ufw allow 66441/tcp
+ufw allow 10261/tcp
 
 #masternode input
 
@@ -40,10 +40,10 @@ echo -e "${GREEN}Preparing config file ${NONE}";
 rm -rf $HOME/.mymn
 sudo mkdir $HOME/.mymn
 
-printf "addnode=139.99.197.135:66441\naddnode=139.99.196.73:66441\naddnode=139.99.202.60:66441\naddnode=139.99.158.38:66441\naddnode=220.233.78.249:66441\n\nrpcuser=mymn432345$PASSW\nrpcpassword=$PASSW\\ndaemon=1\nlisten=1" >  $HOME/.mymn/mymn.conf
+printf "addnode=139.99.197.112:10261\addnode=139.99.197.135:10261\naddnode=139.99.196.73:10261\naddnode=139.99.202.60:10261\naddnode=139.99.158.38:10261\naddnode=220.233.78.249:10261\n\nrpcuser=mymn432345$PASSW\nrpcpassword=$PASSW\\ndaemon=1\nlisten=1" >  $HOME/.mymn/mymn.conf
 
 #MN STUFF
-#\nrpcport=66541\nrpcallowip=127.0.0.1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:66441\nmasternode=1\nmasternodeprivkey=$MNKEY
+#\nrpcport=66541\nrpcallowip=127.0.0.1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:10261\nmasternode=1\nmasternodeprivkey=$MNKEY
 
 
 mymnd
