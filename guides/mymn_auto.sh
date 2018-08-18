@@ -17,14 +17,16 @@ sudo apt-get update -y
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
 
 cd
+#remove old files
+sudo rm /usr/local/bin/mymn*
+rm mymn*
 #get wallet files
-#wget https://raw.githubusercontent.com/telostia/mymn-guides/master/wallet/linux/mymn_linux.tar.gz
 wget https://github.com/telostia/mymn-guides/raw/master/wallet/linux64/mymn-linux.tar.gz
-tar -xvf mymn-linux.tar.gz
-rm mymn-linux* mymn_auto.sh
-chmod +x mymn*
-cp mymn* /usr/local/bin
-ufw allow 10261/tcp
+sudo tar -xvf mymn-linux.tar.gz
+sudo rm mymn-linux* mymn_auto.sh
+sudo chmod +x mymn*
+sudo cp mymn* /usr/local/bin
+sudo ufw allow 10261/tcp
 
 #masternode input
 
@@ -40,7 +42,7 @@ echo -e "${GREEN}Preparing config file ${NONE}";
 rm -rf $HOME/.mymn
 sudo mkdir $HOME/.mymn
 
-printf "addnode=139.99.197.112:10261\naddnode=139.99.197.135:10261\naddnode=139.99.196.73:10261\naddnode=139.99.202.60:10261\naddnode=139.99.158.38:10261\naddnode=220.233.78.249:10261\n\nrpcuser=mymn432345$PASSW\nrpcpassword=$PASSW\\ndaemon=1\nlisten=1" >  $HOME/.mymn/mymn.conf
+printf "addnode=139.99.159.77\naddnode=139.99.197.112:10261\naddnode=139.99.197.135:10261\naddnode=139.99.196.73:10261\naddnode=139.99.202.60:10261\naddnode=139.99.158.38:10261\naddnode=220.233.78.249:10261\n\nrpcuser=mymn432345$PASSW\nrpcpassword=$PASSW\\ndaemon=1\nlisten=1" >  $HOME/.mymn/mymn.conf
 
 #MN STUFF
 #\nrpcport=66541\nrpcallowip=127.0.0.1\nserver=1\nmaxconnections=54\nexternalip=$EXTIP:10261\nmasternode=1\nmasternodeprivkey=$MNKEY
