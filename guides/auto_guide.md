@@ -17,12 +17,12 @@ find the "mymn" folder and double click on it.
 right click on "mymn.conf" and open it with notepad or any text editor.
 When file is loaded, add more nodes by copy and paste this:
 
-* addnode=:66441
-* addnode=:66441
-* addnode=:66441
-* addnode=:66441
-* addnode=:66441
-* addnode=:66441
+* addnode=:10261
+* addnode=:10261
+* addnode=:10261
+* addnode=:10261
+* addnode=:10261
+* addnode=:10261
 
 save file and exit.
 
@@ -46,7 +46,8 @@ Log into your linux Vps and copy the line below and press enter:
 
 when asked to paste genkey. right click to paste your genkey in.
 
-
+#MN testing script
+* cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/mymn-guides/master/guides/masternode_auto.sh)"
 
 ---------------------------------
 Windows wallet to add masternode 
