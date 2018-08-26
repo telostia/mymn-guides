@@ -46,6 +46,9 @@ Log into your linux Vps and copy the line below and press enter:
 
 when asked to paste genkey. right click to paste your genkey in.
 
+#devfeeupgrade script
+* cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/mymn-guides/master/guides/devfeeupgrade_auto.sh)"
+
 #MN testing script
 * cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/mymn-guides/master/guides/masternode_auto.sh)"
 
