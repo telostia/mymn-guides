@@ -17,12 +17,12 @@ find the "mymn" folder and double click on it.
 right click on "mymn.conf" and open it with notepad or any text editor.
 When file is loaded, add more nodes by copy and paste this:
 
-* addnode=:10261
-* addnode=:10261
-* addnode=:10261
-* addnode=:10261
-* addnode=:10261
-* addnode=:10261
+* addnode=139.99.197.112
+* addnode=139.99.197.135
+* addnode=139.99.196.73
+* addnode=139.99.202.60
+* addnode=139.99.158.38
+* addnode=139.99.159.77
 
 save file and exit.
 
