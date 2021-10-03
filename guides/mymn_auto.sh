@@ -29,6 +29,11 @@ sudo chmod +x mymn*
 sudo cp mymn* /usr/local/bin
 sudo ufw allow 10261/tcp
 
+#masternode input
+
+echo -e "${GREEN}Now paste your Masternode key by using right mouse click ${NONE}";
+read MNKEY
+
 EXTIP=`curl -s4 icanhazip.com`
 #USER=`pwgen -1 20 -n`
 PASSW=`pwgen -1 20 -n`
@@ -38,7 +43,7 @@ echo -e "${GREEN}Preparing config file ${NONE}";
 rm -rf $HOME/.mymn
 sudo mkdir $HOME/.mymn
 
-printf "addnode=207.180.236.191:10261\naddnode=75.119.131.189:10261\naddnode=139.99.197.112:10261\naddnode=139.99.196.73:10261\naddnode=207.180.231.172:10261\naddnode=5.196.189.114\n\nrpcuser=mymn432345$PASSW\nrpcpassword=$PASSW\\ndaemon=1\nlisten=1" >  $HOME/.mymn/mymn.conf
+printf "addnode=207.180.236.191:10261\naddnode=75.119.131.189:10261\naddnode=139.99.197.112:10261\naddnode=139.99.196.73:10261\naddnode=207.180.231.172:10261\naddnode=5.196.189.114\n\nrpcuser=mymn432345$PASSW\nrpcpassword=$PASSW\\ndaemon=1\nlisten=1\nserver=1\nmasternode=1\nmasternodeprivkey=$MNKEY" >  $HOME/.mymn/mymn.conf
 
 mymnd
 watch mymn-cli getinfo
