@@ -7,7 +7,10 @@ Windows wallet setup
 -----------------------------
 
 Download windows wallet from these locations:
+
 for 32bit/64bit: 
+
+https://github.com/MyMNProject/mymn/releases/download/1.2.1.1-nobootstrap/mymn-win64-qt.zip
 
 run it. if you cannot get it to sync. got to windows start and type:
 %appdata% 
@@ -17,12 +20,11 @@ find the "mymn" folder and double click on it.
 right click on "mymn.conf" and open it with notepad or any text editor.
 When file is loaded, add more nodes by copy and paste this:
 
-* addnode=139.99.197.112
+* addnode=207.180.231.172
 * addnode=139.99.197.135
 * addnode=139.99.196.73
-* addnode=139.99.202.60
-* addnode=139.99.158.38
-* addnode=139.99.159.77
+* addnode=75.119.131.189
+* addnode=207.180.236.191
 
 save file and exit.
 
@@ -46,17 +48,11 @@ Log into your linux Vps and copy the line below and press enter:
 
 when asked to paste genkey. right click to paste your genkey in.
 
-#devfeeupgrade script
-* cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/mymn-guides/master/guides/devfeeupgrade.sh)"
-
-#MN testing script
-* cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/mymn-guides/master/guides/masternode_auto.sh)"
-
 ---------------------------------
 Windows wallet to add masternode 
 ---------------------------------
 
-1.   Open the VET Coin Desktop Wallet. 
+1.   Open the MYMN Coin Desktop Wallet. 
 2.   Go to RECEIVE and create a New Address: MN1 
 3.   Send 20000 mymn to MN1. 
 4.   Wait for confirmations. 
@@ -64,12 +60,18 @@ Windows wallet to add masternode
 6.   Type the following command: masternode outputs 
 7.   Go to ** Tools -> "Open Masternode Configuration File" 
 8.   Add the following entry: 
+
 Alias Address Privkey TxHash Output_index 
 ?  Alias: MN1 
 ?  Address: VPS_IP:PORT 
 ?  Privkey: Masternode Private Key (paste the genkey you made earlier)
 ?  TxHash: First value from Step 6 
 ?  Output index: Second value from Step 6 
+
+For e.g:
+
+mn1 127.0.0.2:10261 93HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 2bcd3c84c84f87eaa86e4e56834c92927a07f9e18718810b92e0d0324456a67c 0
+
 9.   Save and close the file. 
 10.   Go to Masternode Tab. If your tab is not shown, please enable it 
 from: Settings - Options - Wallet - Show Masternodes Tab 
@@ -78,9 +80,10 @@ start it again. Make sure the wallet is unlocked.
 12.   Open Debug Console and type: 
 masternode start-alias [alias] 
 
-sample for mn1:
+For e.g:
+
 masternode start-alias mn1
 
-Complete! Thank you for joining the revival mymn coin.
+Complete! Thank you for joining mymn coin.
 
  
