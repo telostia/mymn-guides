@@ -12,6 +12,7 @@ sudo apt-get install autotools-dev autoconf pkg-config libssl-dev -y
 sudo apt-get install libgmp3-dev libevent-dev bsdmainutils libboost-all-dev -y
 sudo apt-get install libzmq3-dev -y
 sudo apt-get install libminiupnpc-dev -y
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update -y
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
